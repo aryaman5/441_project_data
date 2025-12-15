@@ -1,7 +1,7 @@
 import pandas as pd
 from nba_api.stats.endpoints import leaguegamelog
 
-SEASON = "2024-25"
+SEASON = "2025-26"
 SEASON_TYPE = "Regular Season"
 
 def fetch_nba_gamelog(season=SEASON, season_type=SEASON_TYPE) -> pd.DataFrame:
@@ -92,7 +92,7 @@ def main():
     print("Final shape:", game_with_stats_df.shape)
     print(game_with_stats_df.head())
 
-    out_path = "nba_2024_2025_games_with_team_stats.csv"
+    out_path = "nba_2025_2026_games_with_team_stats.csv"
     game_with_stats_df.to_csv(out_path, index=False)
     print(f"Saved dataset to {out_path}")
 
